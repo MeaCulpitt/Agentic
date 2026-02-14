@@ -1,4 +1,4 @@
-## 1. Incentive & Mechanism Design
+## Incentive & Mechanism Design
 
 ### Overview
 
