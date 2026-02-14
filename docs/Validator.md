@@ -1,4 +1,4 @@
-## 3. Validator Design
+## Validator Design
 
 ### Scoring and Evaluation Methodology
 
