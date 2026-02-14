@@ -1,4 +1,4 @@
-## 2. Miner Design
+## Miner Design
 
 ### Miner Tasks
 
