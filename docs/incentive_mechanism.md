@@ -13,13 +13,12 @@ Miners earn from two sources:
 **2. Subnet emissions:** Distributed via Yuma Consensus based on validator weights. Validators set weights according to:
 
 ```
-miner_weight = usage_volume × success_rate × uniqueness_multiplier
+miner_weight = usage_volume × uniqueness_multiplier
 ```
 
 Where:
-- **usage_volume** (70% weight): Share of total network invocations. Demonstrates real agent demand. Agents pay per call—they only keep using skills that work.
-- **success_rate** (20% weight): Percentage of invocations that complete without errors. Failed calls / exceptions reduce weight.
-- **uniqueness_multiplier** (10% weight): Based on category saturation. First skill in a category = 3x, 2-3 skills = 2x, 4-5 skills = 1.5x, 6+ skills = 1x. Categories are platform-defined.
+- **usage_volume** (80% weight): Share of total network invocations. Demonstrates real agent demand. Agents pay per call—they only keep using skills that work.
+- **uniqueness_multiplier** (20% weight): Based on category saturation. First skill in a category = 3x, 2-3 skills = 2x, 4-5 skills = 1.5x, 6+ skills = 1x. Categories are platform-defined.
 
 Validators earn standard Bittensor dividends for accurate weight-setting.
 
@@ -27,8 +26,8 @@ Validators earn standard Bittensor dividends for accurate weight-setting.
 
 **Miners** maximize earnings by:
 - Building skills agents actually use (usage drives both payments and emissions)
-- Minimizing errors (success rate affects weight)
 - Targeting underserved categories (uniqueness multiplier)
+- Keeping skills working (broken skills don't get used)
 
 **Validators** maximize earnings by:
 - Running accurate quality assessments (consensus alignment)
@@ -46,21 +45,22 @@ Validators analyze on-chain invocation patterns for:
 - Temporal uniformity (mechanically regular intervals)
 - Zero diversity (single agent using skill)
 
-Skills flagged by validator consensus receive zero weight. Repeat offenders are permanently banned.
-
-**Success rate manipulation:**
-Skills with suspicious invocation patterns (uniform inputs, single caller, predictable timing) have their success rate discounted. Validators cross-reference success rate with usage diversity.
+Skills flagged by validator consensus receive zero weight. Three violations result in a permanent ban.
 
 **Quality enforcement:**
-- Minimum success rate: Skills falling below 80% success rate (after 100+ invocations) are automatically delisted
-- Stake requirement: Miners stake 0.05 τ per skill; stake slashed if skill is delisted for quality violations
-- Combined deterrent: Submitting broken skills = lose stake + lose emissions + get delisted
-- Slashed stakes are burned (deflationary, no governance needed)
+- Stake requirement: Miners stake 0.05 τ per skill
+- Slashing: Evaluated case-by-case by validators. Stake lost for skills that don't work and/or confirmed bad behavior. Cost of entry, cost of failure
+- Delisting: Reserved for bad actors — fake usage, sybil attacks, malicious behavior
+- Slashed stakes are burned (deflationary)
 
-**Sybil resistance:**
-- Uniqueness multiplier penalizes duplicate skills (1x for 10+ similar skills)
-- Usage-weighted emissions mean spreading invocations across duplicates yields less than concentrating on one quality skill
-- Stake requirement (0.05 τ per skill) creates economic friction for mass skill spam
+The market handles quality naturally: broken skills don't get used, so miners don't earn. 
+
+**Sybil & spam resistance:**
+- Stake requirement (0.05 τ per skill) creates economic friction
+- Miners must verify their skill doesn't already exist on the marketplace before submitting
+- Duplicate or near-duplicate skills = stake slashed
+- Validators flag spam, consensus confirms, stake burned
+- Uniqueness multiplier rewards novel skills (first in category = 3x)
 
 ### Proof of Effort / Proof of Intelligence
 
