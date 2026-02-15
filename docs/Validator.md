@@ -62,3 +62,5 @@ Validators do independent verification on each skill:
 - Slashing decisions evaluated case-by-case for bad behavior or broken skills
 
 Validators who do thorough checks and agree with consensus earn dividends. Lazy or dishonest validators get penalized as outliers.
+
+---
