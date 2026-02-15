@@ -1,15 +1,10 @@
-# Agentic - The app store for AI agents
-
-**The decentralized marketplace for AI agent skills.**
-
-[![Bittensor Subnet](https://img.shields.io/badge/Bittensor-Subnet-blue)](https://bittensor.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Agentic - the decentralized marketplace for AI agent skills
 
 ---
 
 ## What is Agentic?
 
-Agentic is a Bittensor subnet where AI agents discover, invoke, and pay for executable skills. Miners build skills (browser automation, document processing, search, communication tools). Validators verify quality. Agents pay per use.
+Agentic is a Bittensor subnet where AI agents discover, invoke, and pay for executable skills. Miners build skills (browser automation, document processing, search, communication tools, etc). Validators verify quality. Agents pay per use.
 
 **Think of it as an app store for AI agent capabilities — decentralized, permissionless, and revenue-generating for developers.**
 
@@ -33,19 +28,19 @@ Agentic is a Bittensor subnet where AI agents discover, invoke, and pay for exec
 
 1. **Miners** build containerized skills (code + Docker + tests)
 2. **Miners** stake 0.05 τ and submit to the marketplace
-3. **Validators** monitor usage and success rates
+3. **Validators** verify skills work and detect fraud
 4. **Agents** search, invoke, and pay per call (95% to miner, 5% platform)
-5. **Emissions** distributed based on usage × success rate × uniqueness
+5. **Emissions** distributed based on usage × uniqueness
 
 ---
 
 ## Key Features
 
 - **Usage-based rewards** — Skills that agents actually use earn more
-- **Quality enforcement** — Below 80% success rate = delisted + stake slashed
+- **Market-driven quality** — Broken skills don't get used, so miners don't earn
 - **Uniqueness incentives** — First skill in a category earns 3x multiplier
 - **No lock-in** — Standard API, switch skills freely
-- **Censorship resistant** — No central authority to deplatform
+- **Fraud protection** — Validators detect fake usage, spam gets slashed
 
 ---
 
@@ -53,11 +48,27 @@ Agentic is a Bittensor subnet where AI agents discover, invoke, and pay for exec
 
 ```python
 miner_weight = (
-    0.70 * usage_volume +      # Share of total invocations
-    0.20 * success_rate +      # % of calls without errors
-    0.10 * uniqueness          # Category saturation multiplier
+    0.80 * usage_volume +      # Share of total invocations
+    0.20 * uniqueness          # Category saturation multiplier
 )
 ```
+
+Usage drives rewards. Build skills agents actually use → earn more.
+
+---
+
+## Quality Gate
+
+Validators proxy all skill invocations (they route payments between agents and miners). On every call, the validator checks:
+- Did the skill respond within the timeout?
+- Did the output match the skill's declared schema?
+- Did it return without errors?
+
+Low success rate = agents stop using your skill = you stop earning. The market handles quality naturally.
+
+**Slashing** — If your skill consistently fails, you lose your stake. Cost of entry, cost of failure.
+
+**Delisting** — Reserved for bad actors: fake usage, sybil attacks, or malicious behavior.
 
 ---
 
@@ -94,7 +105,7 @@ my-skill/
 
 **Requirements:**
 - Stake 0.05 τ per skill
-- Maintain 80%+ success rate
+- Skill must not already exist on marketplace
 - Pass platform smoke tests
 
 ---
@@ -112,10 +123,10 @@ python neurons/validator.py --wallet.name <your_wallet> --netuid <TBD>
 ```
 
 Validators:
-- Monitor invocation logs from platform API
-- Calculate weights from usage, success rate, category saturation
+- Call skills directly to verify they work
+- Detect fake usage, spam, and fraud
+- Calculate weights from usage and uniqueness
 - Submit weights to chain each epoch
-- Detect fake usage and success rate manipulation
 
 ---
 
@@ -174,5 +185,3 @@ MIT License. See [LICENSE](LICENSE) for details.
 Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
-
-*Built on [Bittensor](https://bittensor.com) — the decentralized AI network.*
