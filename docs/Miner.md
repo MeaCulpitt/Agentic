@@ -47,4 +47,6 @@ Output:
 
 The market handles quality naturally: broken skills don't get used, so miners don't earn. Validators monitor for fraud and spam — not arbitrary quality thresholds.
 
+**Category Competition:** Multiple skills exist per category, ranked by usage. Bottom 10% eliminated every 2 weeks — stake slashed. Build something better than what exists, or get cut.
+
 ---
