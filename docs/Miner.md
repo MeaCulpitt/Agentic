@@ -41,8 +41,10 @@ Output:
 
 ### Performance Dimensions
 
-**Usage (70%):** Share of total network invocations. Agents pay per call — sustained usage proves the skill works.
+**Usage (80%):** Share of total network invocations. Agents pay per call — sustained usage proves the skill works.
 
-**Success Rate (20%):** Percentage of invocations completing without errors. Skills below 80% after 100+ calls are delisted.
+**Uniqueness (20%):** Category novelty. First skill in a category earns 3x multiplier; saturated categories earn 1x.
 
-**Uniqueness (10%):** Category novelty. First skill in a category earns 3x multiplier; saturated categories earn 1x.
+The market handles quality naturally: broken skills don't get used, so miners don't earn. Validators monitor for fraud and spam — not arbitrary quality thresholds.
+
+---
