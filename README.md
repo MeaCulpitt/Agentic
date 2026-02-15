@@ -4,7 +4,7 @@
 
 ## What is Agentic?
 
-Agentic is a Bittensor subnet where AI agents discover, invoke, and pay for executable skills. Miners build skills (browser automation, document processing, search, communication tools, etc). Validators verify quality. Agents pay per use.
+Agentic is a Bittensor subnet where AI agents discover, invoke, and pay for executable skills. Miners build skills (browser automation, document processing, search, communication tools). Validators verify quality. Agents pay per use.
 
 **Think of it as an app store for AI agent capabilities — decentralized, permissionless, and revenue-generating for developers.**
 
@@ -57,18 +57,23 @@ Usage drives rewards. Build skills agents actually use → earn more.
 
 ---
 
-## Quality Gate
+## Competition & Quality
 
-Validators proxy all skill invocations (they route payments between agents and miners). On every call, the validator checks:
-- Did the skill respond within the timeout?
-- Did the output match the skill's declared schema?
-- Did it return without errors?
+Multiple skills can exist per category, ranked by usage. Bottom 10% eliminated every 2 weeks — stake slashed.
 
-Low success rate = agents stop using your skill = you stop earning. The market handles quality naturally.
+**Validators check:**
+- Skills respond within timeout
+- Output matches declared schema
+- No fake usage patterns
 
-**Slashing** — If your skill consistently fails, you lose your stake. Cost of entry, cost of failure.
+**Slashing for:**
+- Bottom 10% each cycle
+- Broken skills
+- Fraud/spam
 
-**Delisting** — Reserved for bad actors: fake usage, sybil attacks, or malicious behavior.
+**Permanent ban:** Three violations.
+
+The market handles quality naturally: broken skills don't get used → miners don't earn → they get eliminated.
 
 ---
 
@@ -105,8 +110,8 @@ my-skill/
 
 **Requirements:**
 - Stake 0.05 τ per skill
-- Skill must not already exist on marketplace
 - Pass platform smoke tests
+- Compete: bottom 10% eliminated every 2 weeks
 
 ---
 
