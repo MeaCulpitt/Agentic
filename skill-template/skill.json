@@ -1,0 +1,25 @@
+
+```json
+{
+  "name": "<skill-name>",
+  "version": "1.0.0",
+  "description": "<what the skill does>",
+  "category": "<category>",
+  "input_schema": {
+    "type": "object",
+    "properties": { ... },
+    "required": [ ... ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": { ... }
+  },
+  "pricing": {
+    "cost": "<TAO-amount>"
+  },
+  "runtime": {
+    "timeout_seconds": 30,
+    "memory_mb": 512
+  }
+}
+```
