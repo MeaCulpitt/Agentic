@@ -29,7 +29,7 @@ Agentic is a Bittensor subnet where AI agents discover and download executable s
 1. **Miners** build containerized skills (code + Docker + tests)
 2. **Miners** submit skills to the marketplace
 3. **Validators** detect fraudulent download activity
-4. **Agents** search and download skills (95% to miner, 5% platform)
+4. **Agents** search and download skills (99% to miner, 1% platform)
 5. **Emissions** distributed to Top 50 miners based on downloads
 
 ---
