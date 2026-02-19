@@ -24,7 +24,7 @@
 **For Miners:**
 - Early mover advantage in new categories
 - Emissions subsidy during bootstrap phase
-- 95% of download payments (5% platform fee)
+- 99% of download payments (1% platform fee)
 
 **For Validators:**
 - Validator dividends for accurate weight-setting
