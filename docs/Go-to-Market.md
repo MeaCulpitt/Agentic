@@ -2,71 +2,36 @@
 
 ### Initial Target Users & Use Cases
 
-**Early adopter miners:**
-- Open-source developers already building agent tools
-- Domain specialists (legal, medical, financial professionals who can code or vibe code)
-- Indie hackers wanting to monetize niche expertise
+**Early adopters:**
+- AI agent developers building autonomous systems
+- Developers monetizing existing API integrations
+- Bittensor subnet operators looking for agent capabilities
 
-**Anchor use cases:**
-- Browser automation (form filling, scraping, screenshots)
-- Search & research (web search, document lookup, data aggregation)
-- Communication (email, Slack, Discord, SMS)
-- Document processing (PDF extraction, OCR, summarization)
-
-**Pilot partners:**
-- OpenClaw (agent framework with existing user base)
-- AutoGPT community (large developer audience)
-- LangChain ecosystem (integration-hungry developers)
+**Pilot use cases:**
+- Web scraping and browser automation
+- Data extraction and document processing
+- API integrations (Shopify, Salesforce, etc.)
 
 ### Distribution & Growth Channels
 
-**Developer communities:**
-- Bittensor Discord (existing TAO holders)
-- Agent framework Discords (LangChain, AutoGPT, CrewAI)
-- Twitter/X (AI agent influencers)
-- Hacker News / Reddit (technical audiences)
-
-**Content marketing:**
-- Tutorials: "Build your first skill and earn TAO"
-- Case studies: "How [developer] earns $X/month from Shopify skill"
-- Integration guides for each major agent framework
-- Bitcast (SN93) briefs on X and YouTube
-
-**Partnerships:**
-- Agent framework integrations (native skill discovery)
-- Validator partnerships (established TAO validators)
-- Enterprise pilots (agents needing specific capabilities)
+- **Bittensor ecosystem:** Leverage existing miner/validator networks
+- **Developer communities:** GitHub, Discord, Reddit (r/LocalLLaMA, r/Artificial)
+- **Agent frameworks:** LangChain, AutoGPT, OpenClaw integrations
+- **Content marketing:** Tutorials, skill showcases, developer guides
 
 ### Incentives for Early Participation
 
-**Miners:**
-- Early mover advantage: 3x uniqueness multiplier for pioneering categories
-- Low competition: Fewer miners early = larger share of emissions per miner
-- Featured placement: First skills in each category get marketplace prominence
+**For Miners:**
+- Early mover advantage in new categories
+- Emissions subsidy during bootstrap phase
+- 95% of download payments (5% platform fee)
 
-**Validators:**
-- Standard validator economics (no special incentives needed)
-- Low barrier: Run reference implementation, no custom development
-- Subnet owner provides well-documented, maintained validator code
+**For Validators:**
+- Validator dividends for accurate weight-setting
+- Early participation rewards
+- Network effect benefits as marketplace grows
 
-**Users (Agents):**
-- Competitive pricing: Decentralized = lower fees than centralized alternatives
-- Quality guarantees: Validator-verified skills reduce integration risk
-- No lock-in: Standard API, switch skills freely
-
-### Launch Sequence
-
-**Week 1-4 (Pre-launch):**
-- Deploy testnet with 5-10 reference skills
-- Recruit 3-5 validators
-- Integrate with OpenClaw for pilot testing
-
-**Week 5-8 (Soft launch):**
-- Mainnet deployment
-- Invite-only miner access (quality control)
-- 20-30 skills across core categories
-
-**Week 9+ (Public launch):**
-- Open miner registration
-- Marketing push to agent developer communities
-- Continuous iteration based on usage data
+**For Agents:**
+- Access to diverse skill marketplace
+- Permissionless skill discovery
+- No lock-in — switch skills freely
