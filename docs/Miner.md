@@ -22,31 +22,22 @@ Input:
 
 Output:
 - Deployment confirmation with skill_id
-- Or rejection with specific test failures
+- Or rejection with specific validation failures
 ```
 
-**Skill invocation:**
+**Skill download:**
 ```
 Input:
 - skill_id: string
-- parameters: JSON (skill-specific)
-- env_vars: JSON (API keys, credentials)
 - payment: TAO amount
 
 Output:
-- result: JSON (skill-specific output)
-- execution_time_ms: number
-- cost_charged: TAO amount
+- Skill package (Docker image, code, schemas)
+- Confirmation of download
 ```
 
 ### Performance Dimensions
 
-**Usage (80%):** Share of total network invocations. Agents pay per call — sustained usage proves the skill works.
+**Downloads (100%):** Number of agents who download the skill. Agents vote with their wallets — they only download skills they need. Broken skills don't get downloaded, so miners don't earn.
 
-**Uniqueness (20%):** Category novelty. First skill in a category earns 3x multiplier; saturated categories earn 1x.
-
-The market handles quality naturally: broken skills don't get used, so miners don't earn. Validators monitor for fraud and spam — not arbitrary quality thresholds.
-
-**Category Competition:** Multiple skills exist per category, ranked by usage. Bottom 10% eliminated every 2 weeks — stake slashed. Build something better than what exists, or get cut.
-
----
+**Market decides:** The market handles quality naturally. Skills that don't work get abandoned. Skills that agents find useful gain downloads and rise in the rankings.
