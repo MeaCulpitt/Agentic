@@ -87,7 +87,7 @@ my-skill/
 ```
 
 **Earnings:**
-- 95% of every download payment
+- 99% of every download payment
 - Subnet emissions (Top 50 miners by downloads)
 
 ---
